@@ -12,5 +12,9 @@
 <button ng-click="AboutUsCtr.getData()">Get Data</button>
 
 <ol>
-    <li ng-repeat="organisation in AboutUsCtr.organisations">{{organisation.login}}</li>
+    <li remove-from-list ng-repeat="organisation in AboutUsCtr.organisations">
+        <span>{{organisation.login}}</span>
+        <span ng-show="shown">{{organisation.id}}</span>
+        <strong ng-click="toggleId()">Toggle Id</strong>
+    </li>
 </ol>
