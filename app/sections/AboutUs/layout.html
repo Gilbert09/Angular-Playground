@@ -8,3 +8,9 @@
 
 <button ng-click="AboutUsCtr.changeSection('Company')">Show Company</button>
 <button ng-click="AboutUsCtr.changeSection('Team')">Show Team</button>
+
+<button ng-click="AboutUsCtr.getData()">Get Data</button>
+
+<ol>
+    <li ng-repeat="organisation in AboutUsCtr.organisations">{{organisation.login}}</li>
+</ol>
