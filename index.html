@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <style>
+        ul > li > a {
+            display: block;
+        }
+        
+        .active {
+            font-weight: bold;
+        }
+    </style>
+
+    <base href="/">
 </head>
 <body ng-app="hs-app">
 
-<ui-view></ui-view>
+<ul>
+    <li ui-sref-active="active">
+        <a ui-sref="welcome">Home</a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="about-us">About Us</a>
+    </li>
+</ul>
+
+<div ui-view=""></div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 <script src="app/app.js"></script>
+<script src="app/sections/Welcome/WelcomeController.js"></script>
+<script src="app/sections/AboutUs/AboutUsController.js"></script>
 </body>
 </html>
